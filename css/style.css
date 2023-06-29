@@ -1,0 +1,12 @@
+h1{
+    border: #ff0000 dashed 5px;
+    text-align: center;
+    margin: 30px 0px;
+    padding: 30px;
+}
+
+footer{
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
