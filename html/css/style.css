@@ -10,3 +10,6 @@ footer{
     color: white;
 }
 
+.link {
+    border: #000000 dashed 5px;
+}

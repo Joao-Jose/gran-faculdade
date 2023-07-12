@@ -4,16 +4,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>carrinho de compras</title>
 </head>
 <body>
 
-    <div class="container">
+    <div id="produto" class="container">
 
     <h1><i style="color: red;" class="bi bi-cart-plus"></i> Lojinha do Jão </h1>
-
+    
    <table class="table table-hover">
         <thead>
             <tr>
@@ -21,7 +22,7 @@
                 <th>Produtos</th>
                 <th>Preço Uniário</th>
                 <th>Quantidade</th>
-                <th>Totoal</th>
+                <th>Total</th>
             </tr>
         </thead>
         <tbody>
@@ -34,13 +35,13 @@
                     <div>Código:90887</div>
                     <div>Cor: Azul</div>
                 </td>
-                <td>1000</td>
+                <td id="valor_1" >1000</td>
                 <td>
-                    <span class="badge bg-danger">+</span>
-                    0
-                    <span class="badge bg-success">-</span>
+                    <span class="badge bg-danger" onclick="alterarQtd(1, '-')" ><i class="bi bi-dash"></i></span> 
+                    <span id="quantidade_1" >0</span>
+                    <span class="badge bg-success" onclick="alterarQtd(1, '+')" ><i class="bi bi-plus"></i></span>
                 </td>
-                <td>0</td>
+                <td id="total_1" >0</td>
             </tr>
             <tr>
                 <td>
@@ -51,12 +52,12 @@
                     <div>Código: 90887</div>
                     <div>Cor: Prateado</div>
                 </td>
-                <td>2000</td>
+                <td id="valor_2" >2000</td>
                 <td>
-                    <span class="badge bg-danger">+</span>
-                    0
-                    <span class="badge bg-success">-</span>
-                    <td>0</td>
+                    <span class="badge bg-danger" onclick="alterarQtd(2, '-')" ><i class="bi bi-dash"></i></span> 
+                    <span id="quantidade_2" >0</span>
+                    <span class="badge bg-success" onclick="alterarQtd(2, '+')" ><i class="bi bi-plus"></i></span>
+                    <td id="total_2" >0</td>
                 </td>
             </tr>
             <tr>
@@ -68,12 +69,12 @@
                     <div>Código: 90887</div>
                     <div>Cor: Preto</div>
                 </td>
-                <td>2500</td>
+                <td id="valor_3" >2500</td>
                 <td>
-                    <span class="badge bg-danger">+</span>
-                    0
-                    <span class="badge bg-success">-</span>
-                    <td>0</td>  
+                    <span class="badge bg-danger" onclick="alterarQtd(3, '-')" ><i class="bi bi-dash"></i></span> 
+                    <span id="quantidade_3" >0</span>
+                    <span class="badge bg-success" onclick="alterarQtd(3, '+')" ><i class="bi bi-plus"></i></span>
+                    <td id="idade_3" >0</td>  
                 </td>
             </tr>
             
@@ -81,10 +82,14 @@
    </table>
 
    <footer class="text-center">
-        <span <i class="bi bi-cash-coin"></i> Subtotal: RS$ 0</span>
+        <span <i class="bi bi-cash-coin"></i> Subtotal: RS$  <span id="subtotal">0</span></span>
    </footer>
-    
+    <h1 class="link">
+        <td><i class="bi bi-arrow-right"></i></td>
+        <a target="_blank" href="https://github.com/Johnzmm/gran-faculdade">Código do Projeto</a>
+    </h1>
     </div>
+    
 
 </body>
 </html>
